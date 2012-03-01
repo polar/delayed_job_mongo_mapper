@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.name              = 'delayed_job_mongo_mapper'
   s.summary           = "MongoMapper backend for delayed_job"
-  s.version           = '1.0.0'
+  s.version           = '1.0.1'
   s.authors           = 'Andrew Timberlake'
   s.date              = Date.today.to_s
   s.email             = 'andrew@andrewtimberlake.com'
