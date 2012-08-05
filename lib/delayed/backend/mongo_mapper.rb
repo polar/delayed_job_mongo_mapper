@@ -18,6 +18,7 @@ module Delayed
         key :locked_by,   String    #,  :index => true
         key :failed_at,   Time
         key :last_error,  String
+        key :queue,       String
         
         timestamps!
 
