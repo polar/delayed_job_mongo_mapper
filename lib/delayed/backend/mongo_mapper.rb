@@ -52,6 +52,7 @@ module Delayed
           conditions = {:run_at  => {"$lte" => right_now}, :failed_at => nil}
           (conditions[:priority] ||= {})['$gte'] = Worker.min_priority.to_i if Worker.min_priority
           (conditions[:priority] ||= {})['$lte'] = Worker.max_priority.to_i if Worker.max_priority
+          conditions[:queue] = { "$in" => Worker.queues } if Worker.queues.any? 
 
 
           conditions['$or'] = [
